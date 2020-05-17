@@ -1,0 +1,10 @@
+server:
+  port: 9101
+spring:
+  kafka:
+    bootstrap-servers: 49.233.78.122:9092
+    consumer:
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      group-id: first
+
