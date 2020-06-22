@@ -21,7 +21,7 @@
 
 
     <!--根据业务表id查询-->
-    <select id="queryUser" resultType="com.cache.bean.User" parameterType="java.lang.String">
+    <select id="queryUserById" resultType="com.cache.bean.User" parameterType="java.lang.String">
         select
         <include refid="Field"></include>
         from

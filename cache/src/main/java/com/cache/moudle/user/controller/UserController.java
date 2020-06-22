@@ -44,6 +44,7 @@ public class UserController {
     @ApiImplicitParam(name = "id",value = "主键",paramType = "query",dataType = "String",required = true)
     public List<User> querUserById(String id){
 
+        log.info("访问");
         List<User> userList = userService.queryUserById(id);
         return userList;
     }
