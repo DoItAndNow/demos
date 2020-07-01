@@ -35,12 +35,12 @@ public class MergeSort implements Sort {
             int center = (left + right) / 2;
             sort(data, left, center);
             sort(data, center + 1, right);
-            merge(data, left, center, right);
+            mergeSort(data, left, center, right);
 
         }
     }
 
-    private  void merge(int[] data, int left, int center, int right) {
+    private  void mergeSort(int[] data, int left, int center, int right) {
         int[] tmpArr = new int[data.length];
         int mid = center + 1;
         int third = left;
