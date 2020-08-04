@@ -17,7 +17,7 @@ import com.sort.Sort;
 public class HeapSort implements Sort {
 
     /**
-     * Description:堆排序
+     * Description:堆排序 不稳定 辅助空间为O(1)， 最坏时间复杂度为O(nlog2n)  平均性能接近最坏性能
      * <>
      * @author songcx
      * @date 19:09 2020/7/1
