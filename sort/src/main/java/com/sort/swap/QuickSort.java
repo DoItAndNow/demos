@@ -14,7 +14,7 @@ import com.sort.Sort;
  * </pre>
  */
 
-public class FastSort implements Sort {
+public class QuickSort implements Sort {
 
     /**
      * Description:快速排序
@@ -30,7 +30,7 @@ public class FastSort implements Sort {
         return array;
     }
 
-    private  int getMiddle(int[] list, int low, int high) {
+    private int getMiddle(int[] list, int low, int high) {
         int tmp = list[low];    
         while (low < high) {
             while (low < high && list[high] >= tmp) {

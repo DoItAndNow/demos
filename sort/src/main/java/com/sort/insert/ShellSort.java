@@ -17,7 +17,7 @@ import com.sort.Sort;
 public class ShellSort implements Sort {
 
     /**
-     * Description:希尔排序
+     * Description:希尔排序  每一个子序列排序用了直接插入排序
      * <>
      * @author songcx
      * @date 19:09 2020/7/1
