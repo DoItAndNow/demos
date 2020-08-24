@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cache.moudle.user.mapper.UserMapper">
+
+    <!--意见表字段-->
+    <sql id="Field">
+        USERNAME,PASSWORD
+    </sql>
+
+    <!--意见表值-->
+    <sql id="IdCardCommentValue">
+        #{username},#{password}
+    </sql>
+
+    <!--意见表-->
+    <sql id="Table">
+        YK_USER
+    </sql>
+
+
+    <!--根据业务表id查询-->
+    <select id="queryUserById" resultType="com.cache.bean.User" parameterType="java.lang.String">
+        select
+        <include refid="Field"></include>
+        from
+        <include refid="Table"></include>
+        where
+        ID = #{id}
+    </select>
+
+</mapper>
