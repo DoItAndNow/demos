@@ -1,0 +1,24 @@
+server:
+  port=7970
+spring:
+  application:
+    name: TransactionManager
+  redis:
+    port: 6379
+    host: localhost
+    password: 123456
+      database: 0
+      jedis:
+        pool:
+          max-active: 8
+          max-wait: -1
+          max-idle: 8
+          min-idle: 0
+    timeout: 5000
+txlcn:
+  protocol:
+    name: TM
+    port: 8070
+logging:
+  level:
+    cn.codingapi: DEBUG
