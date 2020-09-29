@@ -1,12 +1,10 @@
 package com.sort;
 
-import com.sort.baseNumber.BaseNumberSort;
 import com.sort.insert.DirectInsertSort;
 import com.sort.insert.ShellSort;
 import com.sort.merge.MergeSort;
 import com.sort.select.HeapSort;
-import com.sort.select.SimpleSelectSort;
-import com.sort.swap.FastSort;
+import com.sort.swap.QuickSort;
 
 /**
  * Description: 排序模块主方法
@@ -23,10 +21,14 @@ import com.sort.swap.FastSort;
 public class SortApplication {
 
     public static void main(String[] args) {
-        int[] array = {34, 18, 54, 5, 4, 69, 99, 98, 54, 56,77,25,33,35,49,72,81,64,36,108};
-        Sort instance = new FastSort();
-        instance.sort(array);
-        SortApplication.printData(array);
+//        int[] array = {34, 18, 54, 5, 4, 69, 99, 98, 54, 56,77,25,33,35,49,72,81,64,36,108};
+//        Sort instance = new HeapSort();
+//        instance.sort(array);
+//        SortApplication.printData(array);
+
+        String test = "data:image/jpeg;base64,322222222222";
+        System.out.println(test);
+        System.out.println(test.substring(test.lastIndexOf(",") + 1));
 
     }
 
