@@ -1,8 +1,8 @@
 server:
-  port: 7901
+  port: 7990
 spring:
   application:
-    name: server-a
+    name: TransactionManager
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
     platform: mysql
@@ -28,8 +28,8 @@ spring:
           db-type: mysql
           slow-sql-millis: 2000
   redis:
-    host: 123.57.183.220
     port: 6379
+    host: 123.57.183.220
     password:
     database: 0
     jedis:
@@ -39,9 +39,20 @@ spring:
         max-idle: 8
         min-idle: 0
     timeout: 5000
+tx-lcn:
+  manager:
+    host: 127.0.0.1
+    port: 7890
+    heart-time: 15000
+    dtx-time: 30000
+    concurrent-level: 128
+    admin-key: password
+  logger:
+    enabled: false
+  message:
+    netty:
+      attr-delay-time: 10000
 logging:
   level:
     cn.codingapi: DEBUG
-tx-lcn:
-  client:
-    manager-address: 127.0.0.1:7890
+

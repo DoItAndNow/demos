@@ -1,24 +1,47 @@
+server:
+  port: 7903
 spring:
   application:
-    name: TransactionManager
+    name: server-c
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    platform: mysql
+    druid:
+      url: jdbc:mysql://cdb-5g9tv4si.bj.tencentcdb.com:10218/tx-lcn?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=CTT
+      username: root
+      password: Songcx123
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      initial-size: 5
+      min-idle: 5
+      max-active: 20
+      max-wait: 60000
+      time-between-eviction-runs-millis: 60000
+      min-evictable-idle-time-millis: 300000
+      validation-query: SELECT 1 FROM DUAL
+      test-while-idle: true
+      test-on-borrow: false
+      test-on-return: false
+      filters: stat,wall,slf4j
+      filter:
+        stat:
+          log-slow-sql: true
+          db-type: mysql
+          slow-sql-millis: 2000
   redis:
+    host: 123.57.183.220
     port: 6379
-    host: localhost
-    password: 123456
-      database: 0
-      jedis:
-        pool:
-          max-active: 8
-          max-wait: -1
-          max-idle: 8
-          min-idle: 0
+    password:
+    database: 0
+    jedis:
+      pool:
+        max-active: 8
+        max-wait: -1
+        max-idle: 8
+        min-idle: 0
     timeout: 5000
-server:
-  port=7970
-txlcn:
-  protocol:
-    name: TM
-    port: 8070
 logging:
   level:
     cn.codingapi: DEBUG
+tx-lcn:
+  client:
+    manager-address: 127.0.0.1:7890
