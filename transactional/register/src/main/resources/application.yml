@@ -1,0 +1,20 @@
+server:
+  port: 8761
+eureka:
+  instance:
+    hostname: localhost
+  server:
+    enable-self-preservation: false
+    peer-node-read-timeout-ms: 90000
+    response-cache-update-interval-ms: 3
+    use-read-only-response-cache: false
+    eviction-interval-timer-in-ms: 3000
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    service-url:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+spring:
+  application:
+    name: register
+

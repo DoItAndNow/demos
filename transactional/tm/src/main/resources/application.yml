@@ -48,7 +48,11 @@ tx-lcn:
     concurrent-level: 128
     admin-key: password
   logger:
-    enabled: false
+    enabled: true
+    driver-class-name: ${spring.datasource.druid.driver-class-name}
+    jdbc-url: ${spring.datasource.druid.url}
+    username: ${spring.datasource.druid.username}
+    password: ${spring.datasource.druid.password}
   message:
     netty:
       attr-delay-time: 10000

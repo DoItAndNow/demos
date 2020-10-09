@@ -16,14 +16,11 @@
         <module>module-a</module>
         <module>module-b</module>
         <module>module-c</module>
+        <module>tx-common</module>
+        <module>register</module>
     </modules>
 
     <dependencies>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
-
         <!--连接池-->
         <dependency>
             <groupId>com.alibaba</groupId>
@@ -79,6 +76,14 @@
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-openfeign</artifactId>
             <version>2.1.1.RELEASE</version>
+        </dependency>
+
+
+        <!--httpclient-->
+        <dependency>
+            <groupId>io.github.openfeign</groupId>
+            <artifactId>feign-httpclient</artifactId>
+            <version>10.1.0</version>
         </dependency>
 
     </dependencies>

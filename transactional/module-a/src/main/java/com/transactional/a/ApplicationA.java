@@ -23,7 +23,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 @EnableDiscoveryClient
 @SpringBootApplication( scanBasePackages = {"com.transactional.a"})
 @EnableFeignClients(basePackages = "com.transactional.a")
-@MapperScan({"com.transactional.a.*.module.*.mapper"})
+@MapperScan({"com.transactional.a.*.mapper"})
 @EnableDistributedTransaction
 public class ApplicationA {
     public static void main(String[] args) {
