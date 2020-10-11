@@ -41,7 +41,7 @@ spring:
     timeout: 5000
 logging:
   level:
-    cn.codingapi: DEBUG
+    com.transactional: DEBUG
 tx-lcn:
   client:
     manager-address: 127.0.0.1:7890

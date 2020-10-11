@@ -23,5 +23,5 @@ public interface UserService {
      * @date 17:02 2020/10/9
      * @param user 1
      **/
-    void addUser(TxUser user);
+    void addUser(TxUser user) throws Exception;
 }

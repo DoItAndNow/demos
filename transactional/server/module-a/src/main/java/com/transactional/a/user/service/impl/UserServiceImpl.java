@@ -38,8 +38,9 @@ public class UserServiceImpl implements UserService {
     @Override
     @Transactional(rollbackFor = Exception.class)
     @TxcTransaction
-    public void addUser(TxUser user) {
-        userMapper.addUser(user);
+    public void addUser(TxUser user) throws Exception {
         roleClient.addRole();
+        userMapper.addUser(user);
     }
+
 }

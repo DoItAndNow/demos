@@ -31,6 +31,6 @@ public class RoleController {
 
     @GetMapping("addRole")
     public void addRole(){
-        roleService.addRole(TxRole.builder().id(1234L).desc("miaoshu").name("juese").build());
+        roleService.addRole(TxRole.builder().id("1234").description("miaoshu").name("juese").build());
     }
 }

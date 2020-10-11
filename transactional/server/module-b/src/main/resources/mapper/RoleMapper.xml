@@ -7,9 +7,9 @@
     <insert id="addRole" parameterType="bean.po.TxRole">
         insert into
         tx_role
-        (id,name,desc)
+        (id,name,description)
         values
-        (#{id},#{name},#{desc})
+        (#{id},#{name},#{description})
     </insert>
 
 </mapper>

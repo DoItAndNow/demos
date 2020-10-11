@@ -37,7 +37,7 @@ public class UserController {
      * @date 17:28 2020/10/9
      **/
     @GetMapping("addUser")
-    public void addUser(){
-        userService.addUser(TxUser.builder().id(123L).username("test").password("password123").build());
+    public void addUser() throws Exception {
+        userService.addUser(TxUser.builder().id(12345L).username("test").password("password123").build());
     }
 }
