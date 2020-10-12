@@ -22,7 +22,7 @@ import lombok.NoArgsConstructor;
 @Builder
 public class TxRole {
 
-    private String id;
+    private Long id;
 
     private String name;
 

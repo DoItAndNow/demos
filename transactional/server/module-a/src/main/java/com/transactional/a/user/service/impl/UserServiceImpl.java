@@ -1,6 +1,8 @@
 package com.transactional.a.user.service.impl;
 
 import bean.po.TxUser;
+import com.codingapi.txlcn.tc.annotation.LcnTransaction;
+import com.codingapi.txlcn.tc.annotation.TccTransaction;
 import com.codingapi.txlcn.tc.annotation.TxcTransaction;
 import com.transactional.a.feign.RoleClient;
 import com.transactional.a.user.mapper.UserMapper;
@@ -37,7 +39,7 @@ public class UserServiceImpl implements UserService {
      **/
     @Override
     @Transactional(rollbackFor = Exception.class)
-    @TxcTransaction
+    @LcnTransaction
     public void addUser(TxUser user) throws Exception {
         roleClient.addRole();
         userMapper.addUser(user);

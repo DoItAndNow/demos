@@ -1,6 +1,8 @@
 package com.transactional.b.role.service.impl;
 
 import bean.po.TxRole;
+import com.codingapi.txlcn.tc.annotation.LcnTransaction;
+import com.codingapi.txlcn.tc.annotation.TccTransaction;
 import com.codingapi.txlcn.tc.annotation.TxcTransaction;
 import com.transactional.b.role.mapper.RoleMapper;
 import com.transactional.b.role.service.RoleService;
@@ -37,8 +39,8 @@ public class RoleServiceImpl implements RoleService {
      **/
     @Override
     @Transactional(rollbackFor = Exception.class)
-    @TxcTransaction
-    public void addRole(TxRole role) {
+    @LcnTransaction
+    public void addRole(TxRole role) throws Exception {
         roleMapper.addRole(role);
     }
 }

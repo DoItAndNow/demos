@@ -30,7 +30,7 @@ public class RoleController {
     private RoleService roleService;
 
     @GetMapping("addRole")
-    public void addRole(){
-        roleService.addRole(TxRole.builder().id("1234").description("miaoshu").name("juese").build());
+    public void addRole() throws Exception {
+        roleService.addRole(TxRole.builder().id(1234L).description("miaoshu").name("juese").build());
     }
 }

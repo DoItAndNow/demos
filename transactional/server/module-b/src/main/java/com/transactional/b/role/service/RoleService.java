@@ -23,5 +23,5 @@ public interface RoleService {
      * @date 11:11 2020/10/10
      * @param role 1
      **/
-    void addRole(TxRole role);
+    void addRole(TxRole role) throws Exception;
 }
