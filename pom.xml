@@ -16,6 +16,7 @@
         <module>sort</module>
         <module>common</module>
         <module>transactional</module>
+        <module>alibaba</module>
     </modules>
 
     <parent>

@@ -2,8 +2,6 @@ package com.transactional.a.user.service.impl;
 
 import bean.po.TxUser;
 import com.codingapi.txlcn.tc.annotation.LcnTransaction;
-import com.codingapi.txlcn.tc.annotation.TccTransaction;
-import com.codingapi.txlcn.tc.annotation.TxcTransaction;
 import com.transactional.a.feign.RoleClient;
 import com.transactional.a.user.mapper.UserMapper;
 import com.transactional.a.user.service.UserService;

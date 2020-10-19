@@ -17,10 +17,10 @@ import java.util.concurrent.TimeUnit;
 public class CreateTopic {
     public static void main(String[] args) {
         Map<String, Object> configs = new HashMap<>();
-        configs.put(AdminClientConfig.BOOTSTRAP_SERVERS_CONFIG, "49.233.78.122:9092");
+        configs.put(AdminClientConfig.BOOTSTRAP_SERVERS_CONFIG, "118.89.19.254:9092");
         KafkaAdmin admin = new KafkaAdmin(configs);
 
-        NewTopic newTopic = new NewTopic("yk-auth", 1, (short) 1);
+        NewTopic newTopic = new NewTopic("firstTopic", 1, (short) 1);
 
         AdminClient adminClient = AdminClient.create(admin.getConfig());
         List<NewTopic> topicList = Arrays.asList(newTopic);
